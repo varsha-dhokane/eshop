@@ -1,0 +1,68 @@
+
+<header>
+<nav class="navbar navbar-expand-lg bg-primary" >
+    <div class="container-fluid nav">
+      <a class="navbar-brand " href="#"><i>Flipkart</i></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <form class="d-flex" role="search">
+        <input class="form-control me-2 searchbar" type="search" placeholder="Search for products, brands and more" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item login">
+            <a class="nav-link active" aria-current="page" id="exampleModal"class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Become a Seller</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              More
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item ms-3 d-flex align-items-center">
+            <span  class="cart-icon" ><i class="bi bi-cart3"></i></span>  <a class="nav-link text-white" href="#">Cart</a>
+            
+          </li>
+        </ul>
+        
+      </div>
+    </div>
+  </nav>
+  </header>
+
+  
+  
+
+
+
+<!-- Modal -->
+
+
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+  <div class="modal-dialog">
+    <div class="modal-content">
+      
+      <div class="modal-body">
+        <app-sign-in *ngIf="actionType == 'signIn' " (emit)="emitActionSign($event)"></app-sign-in>
+        <app-sign-up *ngIf="actionType == 'signUp'"></app-sign-up>
+
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+        

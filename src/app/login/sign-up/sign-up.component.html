@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="sign-up d-flex">
+        <div class="sign-up-logo">
+         <p class="sign-up-title">Login</p>
+        </div>
+        <div class="sign-up-form">
+        <form [formGroup]="signUpForm" (ngSubmit)="signUp()">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">User Name</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="username" >
+              <div id="emailHelp" class="form-text" formControlName="email">We'll never share your email with anyone else.</div>
+            </div>
+            
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Mobile Number</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="mobile" >
+              <div id="emailHelp" class="form-text" formControlName="email">We'll never share your email with anyone else.</div>
+            </div>
+            
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password" formControlName="password">
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" formControlName="conpassword">
+              </div>
+            <div class="d-grid gap-2">
+            <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+            <div class="d-grid gap-2 mt-4 text-center">
+             <a class="text-primary sign-up-link" (click)="redirectSignIn()">Existing User? Login</a>
+            </div>
+          </form>
+          </div>
+    </div>
+</div>
+
